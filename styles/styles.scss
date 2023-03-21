@@ -1,0 +1,9 @@
+@import "./colors";
+@import "./components";
+
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  background-color: $black;
+  color: $mint;
+}

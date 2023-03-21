@@ -1,0 +1,42 @@
+.authenticator {
+  position: relative;
+  margin: auto;
+  width: 200px;
+  top: 20vh;
+  padding: 20px 10px;
+  border-radius: 5px;
+  color: $mint;
+  font-size: 16px;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__form-item {
+    position: relative;
+    margin-bottom: 20px;
+
+    > label {
+      position: absolute;
+      top: 7px;
+      left: 8px;
+      pointer-events: none;
+      transition: transform 250ms ease;
+    }
+  }
+
+  &__input {
+    background: none;
+    border-radius: 5px;
+    border: 2px solid $mint;
+    color: $mint;
+    padding: 15px 20px;
+    font-size: 18px;
+
+    &:focus-within + label,
+    &:not(&:placeholder-shown) + label {
+      transform: scale(0.5) translate(-35px, -15px);
+    }
+  }
+}
