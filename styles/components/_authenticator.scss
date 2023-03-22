@@ -1,12 +1,25 @@
+$header-height: 60px;
+
 .authenticator {
   position: relative;
   margin: auto;
-  width: 200px;
   top: 20vh;
-  padding: 20px 10px;
-  border-radius: 5px;
-  color: $mint;
+  width: 340px;
+  padding: 30px;
+  border-radius: 10px;
+  color: $xanthous;
   font-size: 16px;
+  background-color: $black-overlay;
+  
+
+  &__wrapper {
+    // todo make primary
+    width: 100%;
+    height: calc(100vh - $header-height);
+    background: url("/img/stadium.jpg");
+    background-repeat: no-repeat;
+  }
+
 
   &__form {
     display: flex;
@@ -15,7 +28,10 @@
 
   &__form-item {
     position: relative;
-    margin-bottom: 20px;
+    
+    & + & {
+      margin-top: 20px;
+    }
 
     > label {
       position: absolute;
@@ -29,14 +45,26 @@
   &__input {
     background: none;
     border-radius: 5px;
-    border: 2px solid $mint;
-    color: $mint;
-    padding: 15px 20px;
+    border: 2px solid $xanthous;
+    color: $seasalt;
+    padding: 20px 20px 10px 20px;
     font-size: 18px;
+    width: 100%;
+
+    &:focus-visible {
+      outline: none;
+      // border-color: $seasalt;
+    }
 
     &:focus-within + label,
     &:not(&:placeholder-shown) + label {
-      transform: scale(0.5) translate(-35px, -15px);
+      transform: scale(0.7) translate(-15px, -5px);
     }
+  }
+
+  &__button-group {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px 0 20px;
   }
 }

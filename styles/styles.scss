@@ -1,9 +1,14 @@
 @import "./colors";
+@import "./shared";
 @import "./components";
 
 body {
   margin: 0;
   font-family: 'Rubik', sans-serif;
   background-color: $black;
-  color: $mint;
+  color: $xanthous;
+}
+
+* { 
+  box-sizing: border-box; 
 }

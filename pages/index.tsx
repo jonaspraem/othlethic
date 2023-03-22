@@ -5,9 +5,7 @@ import Authenticator from '../components/authenticator'
 
 const Home: NextPage = () => {
   return (
-    <div>
-      <Authenticator />
-    </div>
+    <Authenticator />
   )
 }
 
