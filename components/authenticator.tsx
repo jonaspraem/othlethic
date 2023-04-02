@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const Authenticator = () => {
   return (
     <div className="authenticator__wrapper">
@@ -14,9 +16,12 @@ const Authenticator = () => {
         </div>
 
         <div className="authenticator__button-group">
-          <button className="button">sign up</button>
-          <button className="button">log in</button>
+          <button className="button button__grow" type="submit">log in</button>
         </div>
+
+        <hr/>
+
+        <p>Dont have an account? <Link href="/">Sign up</Link></p>
       </form>
     </div>
     </div>

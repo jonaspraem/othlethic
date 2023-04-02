@@ -35,8 +35,8 @@ $header-height: 60px;
 
     > label {
       position: absolute;
-      top: 7px;
-      left: 8px;
+      top: 10px;
+      left: 10px;
       pointer-events: none;
       transition: transform 250ms ease;
     }
@@ -53,18 +53,18 @@ $header-height: 60px;
 
     &:focus-visible {
       outline: none;
-      // border-color: $seasalt;
+      border-color: $seasalt;
     }
 
     &:focus-within + label,
     &:not(&:placeholder-shown) + label {
-      transform: scale(0.7) translate(-15px, -5px);
+      transform: scale(0.7) translate(-15px, -10px);
     }
   }
 
   &__button-group {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 20px 0 20px;
+    justify-content: flex-end;
+    padding: 20px 0;
   }
 }
